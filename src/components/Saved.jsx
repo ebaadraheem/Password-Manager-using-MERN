@@ -61,10 +61,10 @@ const Saved = () => {
 
             <table className="w-full ">
                 <thead ref={Head}>
-                    <tr className="flexed gap-5 max-md:text-xs" >
-                        <th className="flexed flexer  w-1/3">Websites</th>
-                        <th className="flexed flexer  w-1/6">Username</th>
-                        <th className="flexed flexer  w-1/6">Password</th>
+                    <tr className="flexed gap-2 md:gap-5 max-md:text-[0.9rem]" >
+                        <th className="flexed flexer  w-[30%]">Websites</th>
+                        <th className="flexed flexer  w-[20%]">Username</th>
+                        <th className="flexed flexer  w-[20%]">Password</th>
                         <th className="flex p-2 ">Edit/Delete</th>
                     </tr>
                 </thead>
@@ -74,31 +74,31 @@ const Saved = () => {
                     </tr>
                     {user.data !== null && user.data.map((items) => (
 
-                        <tr className="flexed gap-5 max-md:text-[0.6rem]" key={items.ID}>
-                            <td className="flexed flexer  w-1/3">
+                        <tr className="flexed gap-2 md;gap-5 max-md:text-[0.9rem]" key={items.ID}>
+                            <td className="flexed flexer  w-[30%]">
                                 <div className="w-full flex px-2">{items.website}</div>
                                 <div className="saved ">
-                                    <img onClick={() => Copied(items.website)} className="m-0.5 md:m-1 max-md:w-3" src="copy-alt.svg" width={18} alt="" />
+                                    <img onClick={() => Copied(items.website)} className="m-0.5 md:m-1 max-md:w-4" src="copy-alt.svg" width={18} alt="" />
                                 </div>
                             </td>
-                            <td className="flexed flexer  w-1/6">
+                            <td className="flexed flexer  w-[20%]">
                                 <div className="w-full flex">{items.username}</div>
                                 <div className="saved">
-                                    <img onClick={() => Copied(items.username)} className="m-0.5 md:m-1 max-md:w-3" src="copy-alt.svg" width={18} alt="" />
+                                    <img onClick={() => Copied(items.username)} className="m-0.5 md:m-1 max-md:w-4" src="copy-alt.svg" width={18} alt="" />
                                 </div>
                             </td>
-                            <td className="flexed flexer  w-1/6">
+                            <td className="flexed flexer  w-[20%]">
                                 <div className="w-full flex">{'*'.repeat(items.password.length)}</div>
                                 <div className="saved">
-                                    <img onClick={() => Copied(items.password)} className="m-0.5 md:m-1 max-md:w-3" src="copy-alt.svg " width={18} alt="" />
+                                    <img onClick={() => Copied(items.password)} className="m-0.5 md:m-1 max-md:w-4" src="copy-alt.svg " width={18} alt="" />
                                 </div>
                             </td>
                             <td className="flex p-2 ">
                                 <div onClick={() => Edit(items.ID)} className="saved">
-                                    <img className="m-1 max-md:w-5" src="pen-square.svg" width={21} alt="" />
+                                    <img className="m-1 max-md:w-5" src="pen-square.svg" width={22} alt="" />
                                 </div>
                                 <div onClick={() => Delete(items.ID)} className="saved">
-                                    <img className="m-1 max-md:w-5" src="trash.svg" width={21} alt="" />
+                                    <img className="m-1 max-md:w-5" src="trash.svg" width={22} alt="" />
                                 </div>
                             </td>
                         </tr>
