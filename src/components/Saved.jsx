@@ -95,10 +95,10 @@ const Saved = () => {
                             </td>
                             <td className="flex p-2 ">
                                 <div onClick={() => Edit(items.ID)} className="saved">
-                                    <img className="m-1 max-md:w-5" src="pen-square.svg" width={22} alt="" />
+                                    <img className="m-1 max-md:w-6" src="pen-square.svg" width={22} alt="" />
                                 </div>
                                 <div onClick={() => Delete(items.ID)} className="saved">
-                                    <img className="m-1 max-md:w-5" src="trash.svg" width={22} alt="" />
+                                    <img className="m-1 max-md:w-6" src="trash.svg" width={22} alt="" />
                                 </div>
                             </td>
                         </tr>
